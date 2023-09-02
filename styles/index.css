@@ -2,71 +2,70 @@
   margin: 0;
   padding: 0;
   font-family: arial;
+  font-size: 2vw;
   color: #111;
-}
-
-#about-yourself {
-  width: 100%;
-}
-
-#about-yourself > img {
-  width: 100%;
-}
-
-#about-yourself > h1 {
-  padding: 30px 30px 10px;
-  font-size: 50px;
-  line-height: 44px;
-}
-
-#about-yourself > ul{
-  padding: 0px 30px 20px;
-  font-size: 14px;
-  line-height: 24px;
-  word-wrap: break-word;
   box-sizing: border-box;
 }
 
+#about-yourself-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#about-yourself-wrapper > div {
+  padding: 15px 40px;
+}
+
+#about-yourself-wrapper > img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+img {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
+}
+
+#about-yourself-wrapper > div > h1 {
+    font-size: 40px;
+}
+#about-yourself-wrapper > div > ul > li {
+    font-size: 24px;
+}
+
 @media only screen and (min-width: 768px) {
-    #about-yourself {
+    #about-yourself-wrapper {
         width: 600px;
         margin: 0 auto;
     }
 
-    #about-yourself > h1 {
-        padding: 20px 0px 0px;
-    }
-    
-    #about-yourself > ul{
-        padding: 20px 0px 0px;
-        font-size: 20px;
+    #about-yourself-wrapper > div > ul {
+        padding: 10px 0px;
     }
 
-    #about-yourself > img {
-        padding-top: 30px;
+    #about-yourself-wrapper > img {
+        border-radius: 10%;
+        padding-top: 0;
     }
 }
 
 @media only screen and (min-width: 1000px){
-    #about-yourself {
+    #about-yourself-wrapper {
         width: 1000px;
+        flex-direction: row-reverse;
+        padding: 30px 0px;
+        column-gap: 20px;
+        
     }
 
-    #about-yourself > h1 {
-        padding: 30px 0px 0px 30px;
+    #about-yourself-wrapper > img {
+        flex: 40%;
+        border-radius: 45%;
+        height: 100%;
     }
 
-    #about-yourself > ul{
-        width: 60%;
-        float: right;
-        padding: 60px 0px 0px 35px;
-        font-size: 25px;
-        line-height: 35px;
-    }
-
-    #about-yourself > img {
-        width: 40%;
-        float: left;
-        border-radius: 50%;
+    #about-yourself-wrapper > div {
+        flex: auto;
+        height: 100%;
     }
 }
